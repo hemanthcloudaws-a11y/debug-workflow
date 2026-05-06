@@ -21,4 +21,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: checkout repo
-          run: echo "testing"
+          run: |
+            echo "testing ${{ inputs.run-tests}}"
+            echo "testing1 ${{ inputs.test-type }}"
