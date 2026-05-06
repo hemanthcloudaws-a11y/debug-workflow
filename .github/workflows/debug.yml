@@ -24,3 +24,7 @@ jobs:
           run: |
             echo "testing ${{ inputs.run-tests}}"
             echo "testing1 ${{ inputs.test-type }}"
+
+        - name: condition
+          if: ${{ inputs.run-tests == 'true' }} 
+          run: echo "testing true"   
